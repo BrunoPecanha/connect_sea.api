@@ -6,6 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="escala.json" />
+    <Content Remove="manifestos.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Seeds\escalas.json" />
+    <None Include="Seeds\manifestos.json" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.26">

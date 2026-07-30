@@ -79,7 +79,7 @@ public class Manifesto : BaseEntity
     private void SetPortoOrigem(string portoOrigem)
     {
         if (string.IsNullOrWhiteSpace(portoOrigem))
-            throw new DomainException("Porto de origem é obrigatório.");
+            throw new DomainException("Porto origem é obrigatório.");
 
         PortoOrigem = portoOrigem;
     }
@@ -87,7 +87,7 @@ public class Manifesto : BaseEntity
     private void SetPortoDestino(string portoDestino)
     {
         if (string.IsNullOrWhiteSpace(portoDestino))
-            throw new DomainException("Porto de destino é obrigatório.");
+            throw new DomainException("Porto destino é obrigatório.");
 
         PortoDestino = portoDestino;
     }

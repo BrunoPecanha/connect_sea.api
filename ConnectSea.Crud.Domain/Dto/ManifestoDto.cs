@@ -10,12 +10,12 @@ namespace ConnectSea.Crud.Domain.Dto
         public string Porto { get; set; }
         public EscalaStatusEnum Status { get; set; }
 
-        public DateTime Eta { get; set; }
+        public DateTimeOffset Eta { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public DateTime? Etb { get; set; }
+        public DateTimeOffset? Etb { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public DateTime? Etd { get; set; }
+        public DateTimeOffset? Etd { get; set; }
     }
 }

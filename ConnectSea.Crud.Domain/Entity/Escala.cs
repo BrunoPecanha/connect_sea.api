@@ -9,9 +9,9 @@ public class Escala : BaseEntity
     public string Navio { get; private set; }
     public string Porto { get; private set; }
     public EscalaStatusEnum Status { get; private set; }
-    public DateTime Eta { get; private set; }
-    public DateTime? Etb { get; private set; }
-    public DateTime? Etd { get; private set; }
+    public DateTimeOffset Eta { get; private set; }
+    public DateTimeOffset? Etb { get; private set; }
+    public DateTimeOffset? Etd { get; private set; }
 
     public ICollection<ManifestoEscala> ManifestoEscalas { get; private set; } = [];
 
@@ -72,7 +72,7 @@ public class Escala : BaseEntity
         Status = status;
     }
 
-    private void SetEta(DateTime eta)
+    private void SetEta(DateTimeOffset eta)
     {
         if (eta == default)
             throw new DomainException("ETA é obrigatório.");
