@@ -13,8 +13,7 @@ namespace ConnectSea.Crud.Api.Controllers
         public ManifestoController(IManifestoService service)
         {
             _service = service;
-        }
-      
+        }      
 
         [HttpGet("paged")]
         public async Task<IActionResult> GetPaged([FromQuery] int page = 1, [FromQuery] int size = 10)

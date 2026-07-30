@@ -12,17 +12,16 @@ namespace ConnectSea.Crud.Application.Mappers
         public static EscalaDto ToDto(Escala entity)
             => new EscalaDto
             {
-                //Id = entity.Id,
-                //Name = entity.Name,
-                //BirthDate = entity.BirthDate,
-                //Sex = entity.Sex
+                Id = entity.Id,
+                Navio = entity.Navio,
+                Porto = entity.Porto,
+                Status = entity.Status,
+                Eta = entity.Eta,
+                Etb = entity.Etb,
+                Etd = entity.Etd
             };
 
-        public static EscalaDto ToDto(int id, string name)
-           => new EscalaDto
-           {
-               //Id = id,
-               //Name = name
-           };
+        public static List<EscalaDto> ToDtoList(IEnumerable<Escala> entities)
+            => entities.Select(ToDto).ToList();
     }
 }

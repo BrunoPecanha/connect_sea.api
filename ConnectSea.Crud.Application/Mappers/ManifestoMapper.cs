@@ -12,17 +12,16 @@ namespace ConnectSea.Crud.Application.Mappers
         public static ManifestoDto ToDto(Manifesto entity)
             => new ManifestoDto
             {
-                //Id = entity.Id,
-                //Name = entity.Name,
-                //BirthDate = entity.BirthDate,
-                //Sex = entity.Sex
+                Id = entity.Id,
+                Numero = entity.Numero,
+                Tipo = entity.Tipo,
+                Navio = entity.Navio,
+                PortoOrigem = entity.PortoOrigem,
+                PortoDestino = entity.PortoDestino,
+                //Escalas = entity.ManifestoEscalas.Select(x => EscalaMapper.ToDto(x.Escala)).ToList()
             };
 
-        public static ManifestoDto ToDto(int id, string name)
-           => new ManifestoDto
-           {
-               //Id = id,
-               //Name = name
-           };
+        public static List<ManifestoDto> ToDtoList(IEnumerable<Manifesto> entities)
+            => entities.Select(ToDto).ToList();
     }
 }

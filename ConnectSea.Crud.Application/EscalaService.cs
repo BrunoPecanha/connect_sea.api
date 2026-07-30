@@ -24,7 +24,7 @@ namespace ConnectSea.Crud.Application
 
             return new PagedResult<EscalaDto>
             {
-                Data = pagedContacts.Data.Select(c => EscalaMapper.ToDto(c)).ToList(),
+                Data = pagedContacts.Data.Select(e => EscalaMapper.ToDto(e)).ToList(),
                 TotalItems = pagedContacts.TotalItems,
                 Page = pagedContacts.Page,
                 PageSize = pagedContacts.PageSize

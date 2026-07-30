@@ -2,7 +2,6 @@
 using ConnectSea.Crud.Domain.Command;
 using ConnectSea.Crud.Domain.Dto;
 using ConnectSea.Crud.Domain.Dto.Results;
-using ConnectSea.Crud.Domain.Entity;
 using ConnectSea.Crud.Domain.Exceptions;
 using ConnectSea.Crud.Domain.Repository;
 using ConnectSea.Crud.Domain.Service;
@@ -24,15 +23,18 @@ namespace ConnectSea.Crud.Application
 
             return new PagedResult<ManifestoDto>
             {
-                Data = pagedContacts.Data.Select(c => ManifestoMapper.ToDto(c)).ToList(),
+                Data = pagedContacts.Data.Select(m => ManifestoMapper.ToDto(m)).ToList(),
                 TotalItems = pagedContacts.TotalItems,
                 Page = pagedContacts.Page,
                 PageSize = pagedContacts.PageSize
             };
         }
 
-        public async Task<Manifesto?> GetByIdAsync(int id)
-            => await _repository.GetByIdAsync(id);
+        public async Task<ManifestoDto> GetByIdAsync(int id)
+        {
+            var manifesto = await _repository.GetByIdAsync(id);
+            return ManifestoMapper.ToDto(manifesto);
+        }
 
         public async Task CreateAsync(ManifestoCommand command)
         {

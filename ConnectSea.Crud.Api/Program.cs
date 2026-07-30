@@ -13,7 +13,16 @@ builder.Services.AddDbContext<DbCtx>(options => options.UseNpgsql(connectionStri
 builder.Services.RegisterServices();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "ConnectSea API",
+        Version = "v1",
+        Description = "API para gerenciamento de Manifestos e Escalas"
+    });
+});
 
 var app = builder.Build();
 

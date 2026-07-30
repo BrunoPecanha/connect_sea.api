@@ -11,8 +11,7 @@ public class Manifesto : BaseEntity
     public string Navio { get; private set; }
     public string PortoOrigem { get; private set; }
     public string PortoDestino { get; private set; }
-
-    public ICollection<ManifestoEscala> ManifestoEscalas { get; private set; } = [];
+   // public ICollection<ManifestoEscala> ManifestoEscalas { get; private set; } = [];
 
     private Manifesto()
     {
@@ -46,14 +45,14 @@ public class Manifesto : BaseEntity
         SetPortoDestino(command.PortoDestino);
     }
 
-    public void AdicionarEscala(int escalaId)
-    {
-        if (ManifestoEscalas.Any(x => x.EscalaId == escalaId))
-            return;
+    //public void AdicionarEscala(int escalaId)
+    //{
+    //    if (ManifestoEscalas.Any(x => x.EscalaId == escalaId))
+    //        return;
 
-        ManifestoEscalas.Add(
-            new ManifestoEscala(Id, escalaId));
-    }
+    //    ManifestoEscalas.Add(
+    //        new ManifestoEscala(Id, escalaId));
+    //}
 
     private void SetNumero(string numero)
     {

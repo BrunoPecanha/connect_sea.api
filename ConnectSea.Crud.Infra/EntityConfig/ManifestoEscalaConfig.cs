@@ -15,13 +15,13 @@ namespace ConnectSea.Crud.Infra.EntityConfig
                 x.EscalaId
             });
 
-            builder.HasOne(x => x.Manifesto)
-                .WithMany(x => x.ManifestoEscalas)
-                .HasForeignKey(x => x.ManifestoId);
+            //builder.HasOne(x => x.Manifesto)
+            //    .WithMany(x => x.ManifestoEscalas)
+            //    .HasForeignKey(x => x.ManifestoId);
 
-            builder.HasOne(x => x.Escala)
-                .WithMany(x => x.ManifestoEscalas)
-                .HasForeignKey(x => x.EscalaId);
+            //builder.HasOne(x => x.Escala)
+            //    .WithMany(x => x.ManifestoEscalas)
+            //    .HasForeignKey(x => x.EscalaId);
         }
     }
 }

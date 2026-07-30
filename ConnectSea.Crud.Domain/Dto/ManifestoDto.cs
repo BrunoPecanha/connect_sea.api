@@ -3,19 +3,14 @@ using System.Text.Json.Serialization;
 
 namespace ConnectSea.Crud.Domain.Dto
 {
-    public class EscalaDto
+    public class ManifestoDto
     {
         public int Id { get; set; }
+        public string Numero { get; set; }
+        public ManifestoTipoEnum Tipo { get; set; }
         public string Navio { get; set; }
-        public string Porto { get; set; }
-        public EscalaStatusEnum Status { get; set; }
-
-        public DateTimeOffset Eta { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public DateTimeOffset? Etb { get; set; }
-
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-        public DateTimeOffset? Etd { get; set; }
+        public string PortoOrigem { get; set; }
+        public string PortoDestino { get; set; }       
+        //public List<EscalaDto> Escalas { get; set; } = [];
     }
 }

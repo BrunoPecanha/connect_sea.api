@@ -12,6 +12,16 @@ namespace ConnectSea.Crud.Infra.Repository
           : base(context)
         {
             _context = context;
-        }       
+        }
+
+        //public async Task<Manifesto> GetCompleteById(int id)
+        //{
+        //    var manifestos = await _context.Manifesto
+        //            .Include(x => x.ManifestoEscalas)
+        //                .ThenInclude(x => x.Escala)
+        //            .FirstOrDefaultAsync();
+
+        //    return manifestos;
+        //}
     }
 }

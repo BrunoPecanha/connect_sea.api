@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <None Remove="ContactService.cs~RF4f74b6a.TMP" />
+    <None Remove="Mappers\ManifestoMapper.cs~RF402b7d.TMP" />
   </ItemGroup>
 
   <ItemGroup>

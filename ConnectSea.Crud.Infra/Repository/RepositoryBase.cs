@@ -40,9 +40,7 @@ namespace ConnectSea.Crud.Infra.Repository
 
         public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return await Db.Set<T>()
-                .AsNoTracking()
-                .ToListAsync();
+            return await Db.Set<T>().AsNoTracking().ToListAsync();
         }
 
         public async Task<T?> GetByIdAsync(int id)
