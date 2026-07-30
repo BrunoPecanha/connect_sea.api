@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>a972f777-7df9-4fa0-bbbb-6074bca49c4d</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Context\DbCtx.cs~RF3c9744c.TMP" />
+    <None Remove="DependencyInjection\ServiceExtensions.cs~RF412be62.TMP" />
+    <None Remove="DependencyInjection\ServiceExtensions.cs~RF4147bf0.TMP" />
+    <None Remove="DependencyInjection\ServiceExtensions.cs~RF418913a.TMP" />
+    <None Remove="EntityConfig\EscalaConfig.cs~RF46842c7.TMP" />
+    <None Remove="Seed\SeedData.cs~RF44eb9ab.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.26" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.26">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="8.0.26" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConnectSea.Crud.Application\ConnectSea.Crud.Application.csproj" />
+    <ProjectReference Include="..\ConnectSea.Crud.CrossCutting\ConnectSea.Crud.CrossCutting.csproj" />
+    <ProjectReference Include="..\ConnectSea.Crud.Domain\ConnectSea.Crud.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Command\ContactEditCommand.cs~RF5021580.TMP" />
+    <None Remove="Dto\ContactDto.cs~RF65e6d38.TMP" />
+    <None Remove="Dto\To.cs~RF69272c9.TMP" />
+    <None Remove="Entity\BaseEntity.cs~RF488aa8d.TMP" />
+    <None Remove="Entity\Manifesto.cs~RF3b9b72f.TMP" />
+    <None Remove="Entity\ManifestoEscala.cs~RF468f26f.TMP" />
+    <None Remove="Repository\IContactRepository.cs~RF6af0a0f.TMP" />
+    <None Remove="Repository\IEntityRepository.cs~RF67627ed.TMP" />
+    <None Remove="Repository\IRepositoryBase.cs~RF6a03128.TMP" />
+    <None Remove="Service\IContactService.cs~RF68208c2.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Repository\IManifestoRepository.cs" />
+  </ItemGroup>
+
+</Project>

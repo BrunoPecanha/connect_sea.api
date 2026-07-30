@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectSea.Crud.Api", "ConnectSea.Crud.Api.csproj", "{30601389-9195-40BF-A478-81A9F6B86AFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectSea.Crud.Application", "..\ConnectSea.Crud.Application\ConnectSea.Crud.Application.csproj", "{0B1C392F-95A4-4939-86FF-1B8C8809E754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectSea.Crud.Domain", "..\ConnectSea.Crud.Domain\ConnectSea.Crud.Domain.csproj", "{59443DD4-7FD5-4BD4-BF40-63FBCD236D4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectSea.Crud.Infra", "..\ConnectSea.Crud.Infra\ConnectSea.Crud.Infra.csproj", "{BEBEEA28-1538-F636-A620-0AB051A3D3AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectSea.Crud.CrossCutting", "..\ConnectSea.Crud.CrossCutting\ConnectSea.Crud.CrossCutting.csproj", "{7CB12BD7-7F19-4696-954C-D68ECF9BE208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectSea.Crud.Test", "..\ConnectSea.Crud.Test\ConnectSea.Crud.Test.csproj", "{0F28E7E7-EE17-4D11-97B8-F0DB7FC57720}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30601389-9195-40BF-A478-81A9F6B86AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30601389-9195-40BF-A478-81A9F6B86AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30601389-9195-40BF-A478-81A9F6B86AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30601389-9195-40BF-A478-81A9F6B86AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B1C392F-95A4-4939-86FF-1B8C8809E754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B1C392F-95A4-4939-86FF-1B8C8809E754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B1C392F-95A4-4939-86FF-1B8C8809E754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B1C392F-95A4-4939-86FF-1B8C8809E754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59443DD4-7FD5-4BD4-BF40-63FBCD236D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59443DD4-7FD5-4BD4-BF40-63FBCD236D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59443DD4-7FD5-4BD4-BF40-63FBCD236D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59443DD4-7FD5-4BD4-BF40-63FBCD236D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEBEEA28-1538-F636-A620-0AB051A3D3AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBEEA28-1538-F636-A620-0AB051A3D3AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBEEA28-1538-F636-A620-0AB051A3D3AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBEEA28-1538-F636-A620-0AB051A3D3AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CB12BD7-7F19-4696-954C-D68ECF9BE208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB12BD7-7F19-4696-954C-D68ECF9BE208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CB12BD7-7F19-4696-954C-D68ECF9BE208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CB12BD7-7F19-4696-954C-D68ECF9BE208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F28E7E7-EE17-4D11-97B8-F0DB7FC57720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F28E7E7-EE17-4D11-97B8-F0DB7FC57720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F28E7E7-EE17-4D11-97B8-F0DB7FC57720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F28E7E7-EE17-4D11-97B8-F0DB7FC57720}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B4CC0AA-0CE7-4557-847F-7F8D51C71373}
+	EndGlobalSection
+EndGlobal
