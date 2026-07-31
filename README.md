@@ -135,22 +135,6 @@ https://localhost:{porta}/swagger
 
 ---
 
-## 🐳 Executando com Docker
-
-Criar a imagem:
-
-```bash
-docker build -t connectsea-api .
-```
-
-Executar o container:
-
-```bash
-docker run -p 8080:8080 connectsea-api
-```
-
----
-
 ## 🧪 Testes
 
 Para executar os testes automatizados:
