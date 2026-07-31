@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Program.cs~RF5560c0.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="Seeds\escalas.json" />
     <None Include="Seeds\manifestos.json" />
   </ItemGroup>
