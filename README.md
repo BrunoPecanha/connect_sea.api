@@ -1,7 +1,5 @@
 # Connect Sea - API
 
-API desenvolvida como parte do desafio técnico da Connect Sea.
-
 O projeto consiste em uma API REST desenvolvida em .NET, com foco em organização, boas práticas de desenvolvimento e separação de responsabilidades.
 
 ---
