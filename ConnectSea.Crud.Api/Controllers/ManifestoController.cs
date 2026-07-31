@@ -47,6 +47,13 @@ namespace ConnectSea.Crud.Api.Controllers
             return NoContent();
         }
 
+        [HttpPut("escalas/{id}")]
+        public async Task<IActionResult> UpdateEscalas(int id, [FromBody] ManifestoEditCommand command)
+        {
+            await _service.UpdateEscalas(id, command);
+            return NoContent();
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

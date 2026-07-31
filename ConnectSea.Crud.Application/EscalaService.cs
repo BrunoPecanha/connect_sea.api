@@ -1,9 +1,9 @@
-﻿using ConnectSea.Crud.Application.Mappers;
-using ConnectSea.Crud.Domain.Command;
+﻿using ConnectSea.Crud.Domain.Command;
 using ConnectSea.Crud.Domain.Dto;
 using ConnectSea.Crud.Domain.Dto.Results;
 using ConnectSea.Crud.Domain.Entity;
 using ConnectSea.Crud.Domain.Exceptions;
+using ConnectSea.Crud.Domain.Mappers;
 using ConnectSea.Crud.Domain.Repository;
 using ConnectSea.Crud.Domain.Service;
 
@@ -12,15 +12,17 @@ namespace ConnectSea.Crud.Application
     public class EscalaService : IEscalaService
     {
         private readonly IEscalaRepository _repository;
+        private readonly IManifestoEscalaRepository _manifestoEscalaRepository;
 
-        public EscalaService(IEscalaRepository repository)
+        public EscalaService(IEscalaRepository repository, IManifestoEscalaRepository manifestoEscalaRepository)
         {
             _repository = repository;
-        }
+            _manifestoEscalaRepository = manifestoEscalaRepository;
+        }   
 
         public async Task<PagedResult<EscalaDto>> GetAllPagedAsync(int pg, int size)
         {
-            var pagedContacts = await _repository.GetPagedAsync(pg, size, x => x.Navio);
+            var pagedContacts = await _repository.GetPagedAsync(pg, size);
 
             return new PagedResult<EscalaDto>
             {
@@ -39,6 +41,17 @@ namespace ConnectSea.Crud.Application
                 throw new NotFoundException("Escala não encontrada");
 
             return EscalaMapper.ToDto(escala);
+        }
+
+
+        public async Task<List<EscalaAssociacaoDto>> GetEscalasByManifestoId(int id)
+        {
+            var escalas = await _repository.GetEscalasByManifestoId(id);
+
+            if (escalas == null)
+                throw new NotFoundException("Manifesto não encontrado");
+
+            return escalas;
         }
 
 

@@ -2,7 +2,7 @@
 using ConnectSea.Crud.Domain.Dto;
 using ConnectSea.Crud.Domain.Entity;
 
-namespace ConnectSea.Crud.Application.Mappers
+namespace ConnectSea.Crud.Domain.Mappers
 {
     public static class ManifestoMapper
     {
@@ -18,7 +18,7 @@ namespace ConnectSea.Crud.Application.Mappers
                 Navio = entity.Navio,
                 PortoOrigem = entity.PortoOrigem,
                 PortoDestino = entity.PortoDestino,
-                //Escalas = entity.ManifestoEscalas.Select(x => EscalaMapper.ToDto(x.Escala)).ToList()
+                Escalas = entity.ManifestoEscalas.Select(x => EscalaMapper.ToDto(x.Escala)).ToList()
             };
 
         public static List<ManifestoDto> ToDtoList(IEnumerable<Manifesto> entities)

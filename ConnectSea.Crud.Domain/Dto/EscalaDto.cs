@@ -17,5 +17,7 @@ namespace ConnectSea.Crud.Domain.Dto
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public DateTimeOffset? Etd { get; set; }
+
+        public List<ManifestoResumoDto> Manifestos { get; set; } = [];
     }
 }

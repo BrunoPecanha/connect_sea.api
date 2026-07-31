@@ -13,6 +13,7 @@
     <None Remove="DependencyInjection\ServiceExtensions.cs~RF4147bf0.TMP" />
     <None Remove="DependencyInjection\ServiceExtensions.cs~RF418913a.TMP" />
     <None Remove="EntityConfig\EscalaConfig.cs~RF46842c7.TMP" />
+    <None Remove="Repository\EscalaRepository.cs~RF3584fd.TMP" />
     <None Remove="Seed\SeedData.cs~RF44eb9ab.TMP" />
   </ItemGroup>
 

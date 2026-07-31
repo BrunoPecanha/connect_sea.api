@@ -13,7 +13,7 @@ public class Escala : BaseEntity
     public DateTimeOffset? Etb { get; private set; }
     public DateTimeOffset? Etd { get; private set; }
 
-    //public ICollection<ManifestoEscala> ManifestoEscalas { get; private set; } = [];
+    public ICollection<ManifestoEscala> ManifestoEscalas { get; private set; } = [];
 
     private Escala()
     {

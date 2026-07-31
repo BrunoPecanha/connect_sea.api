@@ -1,5 +1,4 @@
 ﻿using ConnectSea.Crud.Domain.Enum;
-using System.Text.Json.Serialization;
 
 namespace ConnectSea.Crud.Domain.Dto
 {
@@ -11,6 +10,6 @@ namespace ConnectSea.Crud.Domain.Dto
         public string Navio { get; set; }
         public string PortoOrigem { get; set; }
         public string PortoDestino { get; set; }       
-        //public List<EscalaDto> Escalas { get; set; } = [];
+        public List<EscalaDto> Escalas { get; set; } = [];
     }
 }

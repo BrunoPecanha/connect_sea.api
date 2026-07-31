@@ -1,6 +1,7 @@
 ﻿using ConnectSea.Crud.Domain.Command;
 using ConnectSea.Crud.Domain.Enum;
 using ConnectSea.Crud.Domain.Exceptions;
+using ConnectSea.Crud.Domain.Mappers;
 
 namespace ConnectSea.Crud.Domain.Entity;
 
@@ -11,7 +12,7 @@ public class Manifesto : BaseEntity
     public string Navio { get; private set; }
     public string PortoOrigem { get; private set; }
     public string PortoDestino { get; private set; }
-   // public ICollection<ManifestoEscala> ManifestoEscalas { get; private set; } = [];
+    public ICollection<ManifestoEscala> ManifestoEscalas { get; private set; } = [];
 
     private Manifesto()
     {
@@ -45,14 +46,15 @@ public class Manifesto : BaseEntity
         SetPortoDestino(command.PortoDestino);
     }
 
-    //public void AdicionarEscala(int escalaId)
-    //{
-    //    if (ManifestoEscalas.Any(x => x.EscalaId == escalaId))
-    //        return;
+    public void UpdateEscalas(int[] escalas, int manifestoId)
+    {
+        ManifestoEscalas.Clear();
 
-    //    ManifestoEscalas.Add(
-    //        new ManifestoEscala(Id, escalaId));
-    //}
+        foreach (var escalaId in escalas)
+        {
+            ManifestoEscalas.Add(ManifestoEscalaMapper.ToEntity(manifestoId, escalaId));
+        }
+    }
 
     private void SetNumero(string numero)
     {

@@ -4,6 +4,6 @@ namespace ConnectSea.Crud.Domain.Repository
 {
     public interface IManifestoRepository : IRepositoryBase<Manifesto>
     {
-        //Task<Manifesto> GetCompleteById(int id);
+        Task<Manifesto> GetCompleteById(int id);
     }
 }

@@ -16,6 +16,8 @@ namespace ConnectSea.Crud.Infra.DependencyInjection
             services.AddScoped<IManifestoService, ManifestoService>();
             services.AddScoped<IManifestoRepository, ManifestoRespository>();
 
+            services.AddScoped<IManifestoEscalaRepository, ManifestoEscalaRespository>();
+
             return services;
         }
     }

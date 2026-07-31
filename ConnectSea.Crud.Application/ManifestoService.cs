@@ -1,8 +1,8 @@
-﻿using ConnectSea.Crud.Application.Mappers;
-using ConnectSea.Crud.Domain.Command;
+﻿using ConnectSea.Crud.Domain.Command;
 using ConnectSea.Crud.Domain.Dto;
 using ConnectSea.Crud.Domain.Dto.Results;
 using ConnectSea.Crud.Domain.Exceptions;
+using ConnectSea.Crud.Domain.Mappers;
 using ConnectSea.Crud.Domain.Repository;
 using ConnectSea.Crud.Domain.Service;
 
@@ -32,7 +32,7 @@ namespace ConnectSea.Crud.Application
 
         public async Task<ManifestoDto> GetByIdAsync(int id)
         {
-            var manifesto = await _repository.GetByIdAsync(id);
+            var manifesto = await _repository.GetCompleteById(id);
             return ManifestoMapper.ToDto(manifesto);
         }
 
@@ -52,6 +52,19 @@ namespace ConnectSea.Crud.Application
                 throw new NotFoundException("Manifesto não encontrado");
 
             _repository.Remove(contact);
+            await _repository.SaveChangesAsync();
+        }
+
+        public async Task UpdateEscalas(int id, ManifestoEditCommand command)
+        {
+            var manifesto = await _repository.GetCompleteById(id);
+
+            if (manifesto == null)
+                throw new NotFoundException("Manifesto não encontrado");
+
+            manifesto.UpdateEscalas(command.Escalas, id);
+
+            _repository.Update(manifesto);
             await _repository.SaveChangesAsync();
         }
 

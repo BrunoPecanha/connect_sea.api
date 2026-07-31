@@ -33,6 +33,17 @@ namespace ConnectSea.Crud.Api.Controllers
             return Ok(result);
         }
 
+        [HttpGet("por-manifesto/{id}")]
+        public async Task<IActionResult> GetEscalasByManifestoId(int id)
+        {
+            var result = await _service.GetEscalasByManifestoId(id);
+
+            if (result == null)
+                return NotFound();
+
+            return Ok(result);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] EscalaCommand command)
         {
