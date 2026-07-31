@@ -1,4 +1,4 @@
-# Connect Sea Challenge - API
+# Connect Sea - API
 
 API desenvolvida como parte do desafio técnico da Connect Sea.
 
