@@ -6,5 +6,6 @@
         public string Porto { get; set; }
         public bool Selecionado { get; set; }
         public bool Cancelado { get; set; }
+        public DateTimeOffset Data { get; set; }
     }
 }

@@ -26,7 +26,8 @@ namespace ConnectSea.Crud.Infra.Repository
                     Id = e.Id,
                     Porto = e.Porto,
                     Selecionado = e.ManifestoEscalas.Any(me => me.ManifestoId == manifestoId),
-                    Cancelado = e.Status == EscalaStatusEnum.CANCELADA
+                    Cancelado = e.Status == EscalaStatusEnum.CANCELADA,
+                    Data =  e.Eta
                 })
                 .OrderBy(e => e.Porto)
                 .ToListAsync();
