@@ -131,17 +131,6 @@ Exemplo:
 https://localhost:{porta}/swagger
 ```
 
----
-
-## 🧪 Testes
-
-Para executar os testes automatizados:
-
-```bash
-dotnet test
-```
-
----
 
 ## 📝 Decisões técnicas
 
